@@ -31,6 +31,7 @@ const Landing = () => {
       textBoxValue = document.getElementById(inputBox[i].id).value;
       if (i === 0 && textBoxValue) {
         //Binary to All
+        //API is using in the same domain so absolute path is not necessary
           axios.get(`/B2ALL/${textBoxValue}`).then((res) => {
           document.getElementById("decimal").value = res.data.resultB2D;
           document.getElementById("octal").value = res.data.resultB2O;
