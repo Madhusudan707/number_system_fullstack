@@ -5,16 +5,16 @@
 It is a Simple App, Where you Can Convert One Number to System to Other.
 Tech Stack used in this Apps are
 
-FRONTEND - REACTJS,MATERIAL-UI
-BACKEND - NODEJS, EXPRESS
-UTILITY - BABEL,WEBPACK
+
 
 ## Getting Started
 
 1. npm install
 2. npm start
 
-Live Site : https://numbersystem.herokuapp.com/
+## Live Site
+
+https://numbersystem.herokuapp.com/
 
 
 ##API End Points
