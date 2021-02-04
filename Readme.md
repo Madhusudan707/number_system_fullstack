@@ -3,8 +3,6 @@
 ![Live Gif](https://github.com/Madhusudan707/number_system_react/blob/main/number_system/public/number_system_converter.gif)
 
 It is a Simple App, Where you Can Convert One Number to System to Other.
-Tech Stack used in this Apps are
-
 
 
 ## Getting Started
