@@ -31,21 +31,21 @@ const Landing = () => {
       textBoxValue = document.getElementById(inputBox[i].id).value;
       if (i === 0 && textBoxValue) {
         //Binary to All
-          axios.get(`http://127.0.0.1:3000/B2ALL/${textBoxValue}`).then((res) => {
+          axios.get(`https://numbersystem.herokuapp.com/B2ALL/${textBoxValue}`).then((res) => {
           document.getElementById("decimal").value = res.data.resultB2D;
           document.getElementById("octal").value = res.data.resultB2O;
           document.getElementById("hexadecimal").value = res.data.resultB2HD;
         });
       } else if (i === 1 && textBoxValue) {
        //Decimal to All
-       axios.get(`http://127.0.0.1:3000/D2ALL/${textBoxValue}`).then((res) => {
+       axios.get(`https://numbersystem.herokuapp.com/D2ALL/${textBoxValue}`).then((res) => {
         document.getElementById("binary").value = res.data.resultD2B;
         document.getElementById("octal").value = res.data.resultD2O;
         document.getElementById("hexadecimal").value = res.data.resultD2HD;
       });
       } else if (i === 2 && textBoxValue) {
         //Octal to All
-        axios.get(`http://127.0.0.1:3000/O2ALL/${textBoxValue}`).then((res) => {
+        axios.get(`https://numbersystem.herokuapp.com/O2ALL/${textBoxValue}`).then((res) => {
         document.getElementById("binary").value = res.data.resultO2B;
         document.getElementById("decimal").value = res.data.resultO2D;
         document.getElementById("hexadecimal").value = res.data.resultO2HD;
@@ -53,7 +53,7 @@ const Landing = () => {
        
       } else if (i === 3 && textBoxValue) {
         //HexaDecimal to All
-        axios.get(`http://127.0.0.1:3000/HD2ALL/${textBoxValue}`).then((res) => {
+        axios.get(`https://numbersystem.herokuapp.com/HD2ALL/${textBoxValue}`).then((res) => {
         document.getElementById("binary").value = res.data.resultHD2B;
         document.getElementById("decimal").value = res.data.resultHD2D;
         document.getElementById("octal").value = res.data.resultHD2O;
