@@ -46,8 +46,8 @@ const useStyles = makeStyles((theme) => ({
         <Toolbar>
             <Heading/>
           <ul>
-            <li><a href=''>Home</a></li>
-            <li><a href=''>NumberFact</a></li>
+            <li><a href='#home'>Home</a></li>
+            <li><a href='#numberface'>NumberFact</a></li>
             <li><a href='https://github.com/Madhusudan707/number_system_fullstack' target='_blank'>GitHub</a></li>
           </ul>
         </Toolbar>
