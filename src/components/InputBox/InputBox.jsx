@@ -46,7 +46,7 @@ const ValidationTextField = withStyles({
   },
 })(TextField);
 
-function InputBox({ placeholder, value, inputHandler, id }) {
+function InputBox({ placeholder, value, inputHandler, id,label }) {
   const classes = useStyles();
 
   return (
@@ -58,6 +58,7 @@ function InputBox({ placeholder, value, inputHandler, id }) {
         defaultValue={value}
         id={id}
         onChange={inputHandler}
+        label={label}
       />
     </form>
   );

@@ -63,6 +63,8 @@ const Landing = () => {
       }
    }
    
+  
+   
   }
   function resetHandler(e) {
     document.getElementById("binary").value = "";
@@ -90,6 +92,7 @@ const Landing = () => {
               className="nsBox"
               placeholder="Enter Binary"
               inputHandler={inputHandler}
+              label='Binary'
             />
             <InputBox
               value=""
@@ -97,13 +100,16 @@ const Landing = () => {
               className="nsBox"
               placeholder="Enter Decimal"
               inputHandler={inputHandler}
+              label='Decimal'
             />
+            
             <InputBox
               value=""
               id="octal"
               className="nsBox"
               placeholder="Enter Octal"
               inputHandler={inputHandler}
+              label='Octal'
             />
             <InputBox
               value=""
@@ -111,6 +117,7 @@ const Landing = () => {
               className="nsBox"
               placeholder="Enter Hexa Decimal"
               inputHandler={inputHandler}
+              label='HexaDecimal'
             />
           </div>
         </Grid>
