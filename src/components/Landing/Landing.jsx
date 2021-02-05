@@ -87,7 +87,7 @@ const Landing = () => {
           <br /> <br />
           <div className="InputBoxParent">
             <InputBox
-              value=""
+              value=" "
               id="binary"
               className="nsBox"
               placeholder="Enter Binary"
@@ -95,16 +95,17 @@ const Landing = () => {
               label='Binary'
             />
             <InputBox
-              value=""
+              value=" "
               id="decimal"
               className="nsBox"
               placeholder="Enter Decimal"
               inputHandler={inputHandler}
               label='Decimal'
+              
             />
             
             <InputBox
-              value=""
+              value=" "
               id="octal"
               className="nsBox"
               placeholder="Enter Octal"
@@ -112,7 +113,7 @@ const Landing = () => {
               label='Octal'
             />
             <InputBox
-              value=""
+              value=" "
               id="hexadecimal"
               className="nsBox"
               placeholder="Enter Hexa Decimal"
