@@ -92,7 +92,7 @@ const Landing = () => {
               className="nsBox"
               placeholder="Enter Binary"
               inputHandler={inputHandler}
-              label='Binary'
+              label='Enter Binary'
             />
             <InputBox
               value=" "
@@ -100,7 +100,7 @@ const Landing = () => {
               className="nsBox"
               placeholder="Enter Decimal"
               inputHandler={inputHandler}
-              label='Decimal'
+              label='Enter Decimal'
               
             />
             
@@ -110,7 +110,7 @@ const Landing = () => {
               className="nsBox"
               placeholder="Enter Octal"
               inputHandler={inputHandler}
-              label='Octal'
+              label='Enter Octal'
             />
             <InputBox
               value=" "
@@ -118,7 +118,7 @@ const Landing = () => {
               className="nsBox"
               placeholder="Enter Hexa Decimal"
               inputHandler={inputHandler}
-              label='HexaDecimal'
+              label='Enter HexaDecimal'
             />
           </div>
         </Grid>
