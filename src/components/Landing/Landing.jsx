@@ -72,7 +72,7 @@ const Landing = () => {
 
           document.getElementById("binary-label").innerHTML = "Binary"
           document.getElementById("decimal-label").innerHTML = "Decimal"
-          document.getElementById("octal-label").innerHTML = "HexaDecimal"
+          document.getElementById("octal-label").innerHTML = "Octal"
          
         });
       }
