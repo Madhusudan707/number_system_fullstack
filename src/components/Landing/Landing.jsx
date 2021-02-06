@@ -28,7 +28,7 @@ const Landing = () => {
     for (let i = 0; i < inputBox.length; i++) {
       let textBoxValue = 0;
       textBoxValue = document.getElementById(inputBox[i].id).value;
-      if (i === 0 && textBoxValue) {
+      if (i === 0 && textBoxValue!==" ") {
         //Binary to All
         //API is using in the same domain so absolute path is not necessary
         axios.get(`/B2ALL/${textBoxValue}`).then((res) => {
@@ -40,7 +40,7 @@ const Landing = () => {
           document.getElementById("octal-label").innerHTML = "Octal"
           document.getElementById("hexadecimal-label").innerHTML = "HexaDecimal"
         });
-      } else if (i === 1 && textBoxValue) {
+      } else if (i === 1 && textBoxValue!==" ") {
         //Decimal to All
         axios.get(`/D2ALL/${textBoxValue}`).then((res) => {
           document.getElementById("binary").value = res.data.resultD2B;
@@ -51,7 +51,7 @@ const Landing = () => {
           document.getElementById("octal-label").innerHTML = "Octal"
           document.getElementById("hexadecimal-label").innerHTML = "HexaDecimal"
         });
-      } else if (i === 2 && textBoxValue) {
+      } else if (i === 2 && textBoxValue!==" ") {
         //Octal to All
         axios.get(`/O2ALL/${textBoxValue}`).then((res) => {
           document.getElementById("binary").value = res.data.resultO2B;
@@ -63,7 +63,7 @@ const Landing = () => {
           document.getElementById("hexadecimal-label").innerHTML = "HexaDecimal"
           
         });
-      } else if (i === 3 && textBoxValue) {
+      } else if (i === 3 && textBoxValue!==" ") {
         //HexaDecimal to All
         axios.get(`/HD2ALL/${textBoxValue}`).then((res) => {
           document.getElementById("binary").value = res.data.resultHD2B;
