@@ -4,6 +4,7 @@ const cors = require("cors");
 const app = express();
 const router = express.Router();
 const convert = require("./convert");
+const validation = require('./validation')
 const body_parser = require("body-parser");
 
 const port = process.env.PORT || 3000;
@@ -28,9 +29,10 @@ const base2 = 2,
 
 //1. Binary to All
 
-app.get("/B2ALL/:binary", (req, res, next) => {
+app.get("/B2ALL/:binary", (req, res) => {
   let binary = req.params.binary;
-  if (binary) {
+  let validateInput = validation.isBinary(binary)
+  if (binary && validateInput) {
     res.send({
       resultB2D: convert.BinaryToDecimal(binary, base2),
       resultB2O: convert.BinaryToOctal(binary, base2),
@@ -40,22 +42,23 @@ app.get("/B2ALL/:binary", (req, res, next) => {
       ),
     });
   } else {
-    next(new Error("Invalid Binary Number"));
+   res.send({Error:"Invalid Binary Number"})
   }
 });
 
 //2. Decimal to All
 
-app.get("/D2ALL/:decimal", (req, res, next) => {
+app.get("/D2ALL/:decimal", (req, res) => {
   let decimal = req.params.decimal;
-  if (decimal) {
+  let validateInput = validation.isDecimal(decimal)
+  if (decimal && validateInput ) {
     res.send({
       resultD2B: convert.DecimalToBinary_Octal_hexaDecimal(decimal, base2),
       resultD2O: convert.DecimalToBinary_Octal_hexaDecimal(decimal, base8),
       resultD2HD: convert.DecimalToBinary_Octal_hexaDecimal(decimal, base16),
     });
   } else {
-    next(new Error("Invalid Decimal Number"));
+    res.send({Error:"Invalid Decimal Number"})
   }
 });
 
@@ -63,7 +66,8 @@ app.get("/D2ALL/:decimal", (req, res, next) => {
 
 app.get("/O2ALL/:octal", (req, res, next) => {
   let octal = req.params.octal;
-  if (octal) {
+  let validateInput = validation.isOctal(octal)
+  if (octal && validateInput) {
     res.send({
       resultO2B: convert.DecimalToBinary_Octal_hexaDecimal(
         convert.BinaryToDecimal(octal, base8),
@@ -76,7 +80,7 @@ app.get("/O2ALL/:octal", (req, res, next) => {
       ),
     });
   } else {
-    next(new Error("Invalid Octal Number"));
+    res.send({Error:"Invalid Octal Number"})
   }
 });
 
@@ -84,7 +88,8 @@ app.get("/O2ALL/:octal", (req, res, next) => {
 
 app.get("/HD2ALL/:hexadecimal", (req, res, next) => {
   let hexadecimal = req.params.hexadecimal;
-  if (hexadecimal) {
+  let validateInput = validation.isHexaDecimal(hexadecimal)
+  if (hexadecimal && validateInput) {
     res.send({
       resultHD2B: convert.DecimalToBinary_Octal_hexaDecimal(
         convert.hexadecimalToBinary(hexadecimal, base16),
@@ -97,7 +102,7 @@ app.get("/HD2ALL/:hexadecimal", (req, res, next) => {
       ),
     });
   } else {
-    next(new Error("Invalid HexaDecimal Number"));
+    res.send({Error:"Invalid HexaDecimal Number"})
   }
 });
 
