@@ -40,9 +40,7 @@ const isValidNumber = (input, push) => {
 
       case "hd": //"hd":hexadecimal
         if (!isA2FCheck(arr[i])) {
-          console.log("yes");
           if (arr[i] < 0 || isNaN(arr[i])) {
-            console.log("yes");
             flag = false;
             break;
           } else {
@@ -55,6 +53,9 @@ const isValidNumber = (input, push) => {
 
       default:
         return false;
+    }
+    if(!flag){
+        break;
     }
   }
   return flag;
