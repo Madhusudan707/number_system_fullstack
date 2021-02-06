@@ -19,10 +19,8 @@ const isValidNumber = (input, push) => {
       case "d": //"d":decimal
         if (isNaN(arr[i])) {
           flag = false;
-          console.log(arr[i]);
           break;
         } else {
-          console.log(arr[i]);
           flag = true;
         }
         break;
@@ -30,10 +28,8 @@ const isValidNumber = (input, push) => {
       case "o": //"o":octal
         if (arr[i] > 7 || isNaN(arr[i])) {
           flag = false;
-          console.log(arr[i]);
           break;
         } else {
-          console.log(arr[i]);
           flag = true;
         }
         break;
