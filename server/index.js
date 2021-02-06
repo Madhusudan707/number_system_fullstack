@@ -51,7 +51,7 @@ app.get("/B2ALL/:binary", (req, res) => {
 
 app.get("/D2ALL/:decimal", (req, res) => {
   let decimal = req.params.decimal;
-  let validateInput = validation.isDecimal(decimal, "d"); //"d":decimal
+  let validateInput = validation.isValidNumber(decimal, "d"); //"d":decimal
   if (decimal && validateInput) {
     res.send({
       resultD2B: convert.DecimalToBinary_Octal_hexaDecimal(decimal, base2),
@@ -67,7 +67,7 @@ app.get("/D2ALL/:decimal", (req, res) => {
 
 app.get("/O2ALL/:octal", (req, res, next) => {
   let octal = req.params.octal;
-  let validateInput = validation.isOctal(octal, "o"); //"o":octal
+  let validateInput = validation.isValidNumber(octal, "o"); //"o":octal
   if (octal && validateInput) {
     res.send({
       resultO2B: convert.DecimalToBinary_Octal_hexaDecimal(
@@ -89,7 +89,7 @@ app.get("/O2ALL/:octal", (req, res, next) => {
 
 app.get("/HD2ALL/:hexadecimal", (req, res, next) => {
   let hexadecimal = req.params.hexadecimal;
-  let validateInput = validation.isHexaDecimal(hexadecimal, "hd"); ////"hd":hexadecimal
+  let validateInput = validation.isValidNumber(hexadecimal, "hd"); ////"hd":hexadecimal
   if (hexadecimal && validateInput) {
     res.send({
       resultHD2B: convert.DecimalToBinary_Octal_hexaDecimal(
