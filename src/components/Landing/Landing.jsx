@@ -79,10 +79,10 @@ const Landing = () => {
     }
   }
   function resetHandler(e) {
-    document.getElementById("binary").value = "";
-    document.getElementById("decimal").value = "";
-    document.getElementById("octal").value = "";
-    document.getElementById("hexadecimal").value = "";
+    document.getElementById("binary").value = " ";
+    document.getElementById("decimal").value = " ";
+    document.getElementById("octal").value = " ";
+    document.getElementById("hexadecimal").value = " ";
 
     document.getElementById("binary-label").innerHTML = "Enter Binary"
     document.getElementById("decimal-label").innerHTML = "Enter Decimal"
