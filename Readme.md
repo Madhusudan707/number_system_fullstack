@@ -8,7 +8,7 @@ It is a Simple App, Where you Can Convert One Number to System to Other.
 ## Getting Started
 
 1. npm install
-2. npm start
+2. npm run dev
 
 ## Live Site
 
